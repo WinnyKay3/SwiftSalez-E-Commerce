@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/ecommerce', {
+mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+    useUnifiedTopology: true
 }).then(() => {
     console.log('Connected to MongoDB');
 }).catch((error) => {

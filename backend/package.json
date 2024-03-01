@@ -1,7 +1,7 @@
 {
-  "name": "ecommerce-backend",
+  "name": "swift-sales-backend",
   "version": "1.0.0",
-  "description": "Backend for ecommerce platform",
+  "description": "Backend for POS platform",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "1.6.7",
+    "bcryptjs": "2.4.3",
     "body-parser": "^1.19.0",
+    "dotenv": "16.4.5",
     "express": "^4.17.1",
+    "jsonwebtoken": "9.0.2",
     "mongoose": "^6.0.13"
   }
 }

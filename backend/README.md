@@ -38,3 +38,11 @@ Contributions are welcome! Feel free to open issues or pull requests for bug fix
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+Environment variables:
+- JWT_SECRET: String containing the JWT secret. To generate one you could run the following command in Node REPL
+```
+console.log(require('crypto').randomBytes(32).toString('hex'));
+```
+
+

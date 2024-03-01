@@ -8,12 +8,17 @@ const paymentRoutes = require('./routes/paymentRoutes');
 const errorHandler = require('./utils/errorHandler');
 const app = express(); // Create an instance of express
 
+
+
+require('dotenv').config();
+require('./config/database.js');
 app.use(bodyParser.json());
+
 app.use('/', homeRoutes);
-app.use('/users', userRoutes);
-app.use('/products', productRoutes);
-app.use('/orders', orderRoutes);
-app.use('/payments', paymentRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/payments', paymentRoutes);
 
 app.use(errorHandler);
 

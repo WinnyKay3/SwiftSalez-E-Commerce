@@ -1,0 +1,32 @@
+### Get All Products
+GET http://localhost:3000/api/products
+Accept: application/json
+
+### Create New Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "title": "Sample Product",
+    "description": "This is a sample product",
+    "sku": "SKU123",
+    "price": 19.99,
+    "stockQuantity": 100,
+    "category": ["Electronics"]
+}
+
+### Get Product By ID
+GET http://localhost:3000/api/products/12345
+Accept: application/json
+
+### Update Product
+PUT http://localhost:3000/api/products/12345
+Content-Type: application/json
+
+{
+    "price": 29.99,
+    "stockQuantity": 95
+}
+
+### Delete Product
+DELETE http://localhost:3000/api/products/12345
